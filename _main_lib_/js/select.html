@@ -1,15 +1,21 @@
+<p id="_a_"></p>
 <script>
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const vs = urlParams.get('view-sorce')
 const select = urlParams.get('select')
-
-function sfnc() {
+var project_array = ['sandbox']
+if (project_array.includes(select)) {
+    function sfnc() {
 window.location.href = '/'+select+'/project.html'
 }
 if (vs=='yes') {
     window.location.href = '/'+select+'/sorce.html'
 
 }else{
-sfnc();}
+sfnc();}    
+}else{
+    document.getElementById('_a_').innerHTML = "{error:'true','message':'not valid selection or faulty parameter'}"
+}
+
 </script>
