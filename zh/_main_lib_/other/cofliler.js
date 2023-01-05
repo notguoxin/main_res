@@ -10,10 +10,10 @@ function rd(host) {
 function bruh() {
   var current_host = location.host
   if (!rd(current_host)) {
-    window.location.href = '/_main_lib_/error/xenon.html?errorid=1cbfa571504cf3659d9ffe7886f77d8c';    
+    window.location.href = './_main_lib_/error/xenon.html?errorid=1cbfa571504cf3659d9ffe7886f77d8c';    
   }else if(rd(current_host)==='type2'){
     const lpd = location.href.replace('http://','').replace(location.host,'')
-    window.location.href = '/_main_lib_/error/xenon.html?errorid=a9dbcf3d21eee91bf40e5bd857e642f8&lpd='+lpd;    
+    window.location.href = './_main_lib_/error/xenon.html?errorid=a9dbcf3d21eee91bf40e5bd857e642f8&lpd='+lpd;    
   }
 };
 bruh();

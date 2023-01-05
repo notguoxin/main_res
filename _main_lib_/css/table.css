@@ -1,0 +1,28 @@
+*{
+    font-family: sans-serif;
+}
+.table {
+    background-color: rgb(27, 30, 31);
+    color: rgb(211, 207, 202);
+    border-color: rgb(72, 78, 81);
+    color: #ffffff;
+    border-collapse: collapse;
+  }
+  .table > caption {
+font-weight: bold;
+}.table > tr > th, .table > * > tr > th {
+background-color: rgb(34, 37, 38);
+}.table > tr > th, .table > tr > td, .table > * > tr > th, .table > * > tr > td {
+border: 1px solid #a2a9b1;
+border-top-color: rgb(162, 169, 177);
+border-right-color: rgb(162, 169, 177);
+border-bottom-color: rgb(162, 169, 177);
+border-left-color: rgb(162, 169, 177);
+padding: 0.2em 0.4em;
+}
+.table > caption {
+font-weight: bold;
+}
+.highlight {
+  background-color: yellow;
+}

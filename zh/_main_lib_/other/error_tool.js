@@ -1,0 +1,1 @@
+var javascript_error = ['0x0034AA','0x00034AB','0x00036BN']

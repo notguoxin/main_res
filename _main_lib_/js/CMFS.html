@@ -2,8 +2,10 @@
 <script>
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
+const lc = urlParams.get('lang')
 const vs = urlParams.get('view-sorce')
 const select = urlParams.get('select')
+if (!vs=="") {
 var project_array = ['sandbox']
 if (project_array.includes(select)) {
     function sfnc() {
@@ -17,7 +19,17 @@ sfnc();}
 }else{
     document.getElementById('_a_').innerHTML = "{error:'true','message':'not valid selection or faulty parameter'}"
 }
+}
 
+if (!lc=="") {
+    if (lc=='zh') {
+    window.location.href = '/'+lc+'/'
+}else if(lc=="en"){
+    window.location.href = '/main.html'
+}else{
+    document.getElementById('_a_').innerHTML = "{error:'true','message':'not valid selection or faulty parameter'}"
+}
+}
 </script>
 <script src="/_main_lib_/other/jsloader.js" async></script>
 <script src='/_main_lib_/other/cofliler.js'></script>

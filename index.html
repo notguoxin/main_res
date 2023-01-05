@@ -4,21 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/_main_lib_/other/jsloader.js" async></script>
-    <script src='/_main_lib_/other/cofliler.js'></script>
-    <title>Select a project</title>
+    <title>Document</title>
 </head>
-<body >
-    <form action="/_main_lib_/js/select.html">
-<label for="select">Choose a project to view:</label>
-<select name="select" id="select">
-<option value="sandbox">Sandbox</option>
-</select>
-<br><br>
-<input type="submit" value="Submit" onclick="">
-<br><br>
-<input type="checkbox" id="view-sorce" name="view-sorce" value="yes" style="opacity: 5%;">
+<body>
+  <form action="/_main_lib_/js/CMFS.html">
+    <label for="language-select">Select a language:</label>
+    <select id="language-select" name="lang">
+      <option value="en">English</option>
+      <option value="zh">中文 (mandarin)</option>
+    </select>
+    <button type="submit">Continue</button>
+  </form>
 
-</form>
 </body>
 </html>
+  <script>
+    const form = document.getElementById("language-form");
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const select = document.getElementById("language-select");
+      const language = select.value;
+      console.log(`Selected language: ${language}`);
+    });
+  </script>
+<script src="/_main_lib_/other/jsloader.js" async></script>
+<script src='/_main_lib_/other/cofliler.js'></script>
