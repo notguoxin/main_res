@@ -5,6 +5,9 @@ const urlParams = new URLSearchParams(queryString);
 const lc = urlParams.get('lang')
 const vs = urlParams.get('view-sorce')
 const select = urlParams.get('select')
+if (select==""){
+    window.location.href = '/main.html'
+}
 if (!vs=="") {
 var project_array = ['sandbox']
 if (project_array.includes(select)) {
